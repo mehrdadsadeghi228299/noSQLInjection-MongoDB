@@ -1,34 +1,30 @@
 /**
- *  * @swagger
- * /pro/createProduct:
- *   get:
- *     summary: get ejs-page for create products
- *     tags: [Products]
- *     responses:
- *       200:
- *         description: Successful creation of product
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 token:
- *                   type: string
- *                 user:
- *                   type: object
- *       400:
- *         description: Invalid credentials
- *       500:
- *         description: Server error
+ * @swagger
  * 
  * /pro/createProduct:
- *   post:
+ *  post:
  *     summary: get ejs-page for create products
  *     tags: [Products]
  *     requestBody:
  *       required: true
  *       content:
  *         application/x-www-form-urlencoded:
+ *          schema:
+ *             type: object
+ *             required:
+ *               - name
+ *               - price
+ *               - description
+ *               - count
+ *             properties:
+ *               name:
+ *                 type: string
+ *               price:
+ *                 type: number
+ *               description:
+ *                 type: string
+ *               count:
+ *                 type: number
  *         application/json:
  *           schema:
  *             type: object
@@ -58,6 +54,18 @@
  *                   type: string
  *                 user:
  *                   type: object
+ *       400:
+ *         description: Invalid credentials
+ *       500:
+ *         description: Server error
+ * /pro/getcreateProduct:
+ *  get:
+ *     summary: get ejs-page for create products
+ *     tags: 
+ *       - Products
+ *     responses:
+ *       200:
+ *         description: Successful creation of product         
  *       400:
  *         description: Invalid credentials
  *       500:
@@ -274,4 +282,26 @@
  *       500:
  *         description: Server error
  *
- * */
+ * 
+ * components:
+ *   schemas:
+ *     Product:
+ *       type: object
+ *       properties:
+ *         id:
+ *           type: string
+ *         name:
+ *           type: string
+ *         price:
+ *           type: number
+ *         description:
+ *           type: string
+ *         count:
+ *           type: number
+ *
+ * 
+ *
+ * 
+ * 
+ * 
+ */

@@ -1,20 +1,20 @@
 
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
 
-const productsSchema = new mongoose.Schema({
+const {model ,Schema} = require('mongoose');
+
+const productsSchema = new Schema({
   name: {
     type: String,
     required: true,
     //unique: true,
-    trim: true,
+    trim: true
   },
   price: {
     type:Number
   },
   count: {
-    type: Number,
-    required: true,
+    type: Number
+    //required: true,
 
   }, 
   description: {
@@ -24,8 +24,8 @@ const productsSchema = new mongoose.Schema({
   },
    
   whoAdd: {
-    type: String,
-    required: true,
+    type: String
+  //  required: true,
   },
   accessLevel: {
     type: String,
@@ -39,6 +39,6 @@ const productsSchema = new mongoose.Schema({
 });
 
 //productsSchema.index({ name: 'text', description: 'text' });
-const Products = mongoose.model('Products', productsSchema);
+const Products = model('Products', productsSchema);
 
-module.exports = Products;
+module.exports = {Products};

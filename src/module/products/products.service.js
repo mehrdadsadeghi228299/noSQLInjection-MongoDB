@@ -1,16 +1,13 @@
-const Products = require("./products.model");
 const createHttpError = require("http-errors");
 
 class ProductsService {
   async createProduct(name, price, description, count) {
     try {
-      const newProduct = (
-        await Products.create({ name, price, description, count })
-      ).save();
+      const newProduct = await Products.create({ name, price, description, count, accessLevel: 'user', whoAdd: "me" });
       return newProduct;
     } catch (error) {
       return createHttpError.NotFound(
-        "we have some issues with unique type check, please verify your input."
+        "we have some issues with unique type check, please verify your input."+error
       );
     }
   }

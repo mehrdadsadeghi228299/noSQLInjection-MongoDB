@@ -13,19 +13,10 @@ class ProductsController {
    }
   }
 
-  async createProduct(req, res) {
-    // Logic for creating a product
-    const errorValidator = validationResult(req);
-    if (!errorValidator) {
-      //  logger.log('info', "error for faild in validateAuthRegisterschema \'"+error+"\'");
-      return res.status(HttpStatusCode.NotAcceptable).json({
-        statusCodes: HttpStatusCode.NotAcceptable,
-        message: errorValidator,
-      });
-    }
+  async createProduct(req, res) {  
 
     const { name, price, description, count } = req.body;
-
+    //req.body.whoAdd = req.user.id;
     const newProduct = await productsService.createProduct({
       name,
       price,
@@ -33,6 +24,7 @@ class ProductsController {
       count,
     });
     // Save the product to the database
+
     res
       .status(201)
       .json({ message: "Product created successfully", product: newProduct });

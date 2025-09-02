@@ -3,7 +3,7 @@ const productController  = require('./product.controller');
 const ProRoutes = express.Router();
 
 
-ProRoutes.get('/createProduct', productController.getcreateProduct);
+ProRoutes.get('/getcreateProduct', productController.getcreateProduct);
 ProRoutes.post('/createProduct', productController.createProduct.bind(productController));
 /*  Route for lab     */
 ProRoutes.get('/products/name/eq/:name', productController.getProductsByNameWithEq.bind(productController));
