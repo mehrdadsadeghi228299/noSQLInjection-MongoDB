@@ -1,0 +1,43 @@
+{
+  "name": "nosqlinjection-mongodb",
+  "version": "1.0.0",
+  "description": "create a new OWASP lab for my personal usess ",
+  "main": "main.js ",
+  "scripts": {
+    "test": "nodemon main.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehrdadsadeghi228299/noSQLInjection-MongoDB.git"
+  },
+  "keywords": [
+    "noSQL-injection",
+    "mongodb"
+  ],
+  "author": "mehrdad sadeghi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mehrdadsadeghi228299/noSQLInjection-MongoDB/issues"
+  },
+  "homepage": "https://github.com/mehrdadsadeghi228299/noSQLInjection-MongoDB#readme",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "http-errors": "^2.0.0",
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.19.0",
+    "mongoose": "^8.18.0",
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.10",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "winston": "^3.17.0"
+  }
+}
