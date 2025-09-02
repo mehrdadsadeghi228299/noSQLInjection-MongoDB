@@ -5,13 +5,13 @@ function SwaggerConfig (app) {
         swaggerDefinition: {
             openapi: "3.0.1",
             info: {
-                title: "saied-backend",
+                title: "temp-backend-lab",
                 description: "level one if Projects",
                 version: "0.1.0",
             },
             servers: [
                 {
-                  url: "http://localhost:4088",
+                  url: "http://localhost:3000",
                 },
                 {
                   url: "http://localhost:4088",

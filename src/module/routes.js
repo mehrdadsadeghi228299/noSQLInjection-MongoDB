@@ -1,13 +1,10 @@
 const express = require('express');
-const { AuthRoutes } = require('./auth/auth.routes');
-const { CerRoutes } = require('./cer/cer.routes');
-const { MenuRouter } = require('./menu/menu.route');
+const { ProRoutes } = require('./products/products.routes');
 const router = express.Router();
+ 
 
-router.use(MenuRouter)
+router.use("/pro",ProRoutes)
 
-router.use("/auth",AuthRoutes)
-// router.use("/cer",CerRoutes)
 module.exports={
     router
 }

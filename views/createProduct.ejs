@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Product</title>
+  <link rel="stylesheet" href="/css/loginStyless.css">
+</head>
+<body>
+  <div class="login-container">
+    <form class="login-form" action="/pro/createProduct" method="POST">
+      <h2>Create Product</h2>
+      <div class="input-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+      </div>
+      <div class="input-group">
+        <label for="price">Price</label>
+        <input type="number" name="price" id="price" required>
+      </div>
+      <div class="input-group">
+        <label for="description">Description</label>
+        <input type="text" name="description" id="description" required>
+      </div>
+      <div class="input-group">
+        <label for="count">Count</label>
+        <input type="number" name="count" id="count" required>
+      </div>
+      <button type="submit">Create Product</button>
+    </form>
+  </div>
+</body>
+</html>
