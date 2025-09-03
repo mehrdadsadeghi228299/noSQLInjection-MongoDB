@@ -39,6 +39,6 @@ const productsSchema = new Schema({
 });
 
 //productsSchema.index({ name: 'text', description: 'text' });
-const Products = model('Products', productsSchema);
+module.exports = model('Products', productsSchema);
 
-module.exports = {Products};
+

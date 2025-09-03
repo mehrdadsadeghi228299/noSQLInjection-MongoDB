@@ -16,6 +16,8 @@ class ProductsController {
   async createProduct(req, res) {  
 
     const { name, price, description, count } = req.body;
+    console.log({ name, price, description, count });
+    
     //req.body.whoAdd = req.user.id;
     const newProduct = await productsService.createProduct({
       name,
